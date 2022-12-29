@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1672305815 source:c:\users\lenovo\documents\tubesstrukdat\main.cpp
+	"rumahsakit.h"
+
+1672304343 c:\users\lenovo\documents\tubesstrukdat\rumahsakit.h
+	<iostream>
+	<iomanip>
+	<sstream>
+
+1672305762 source:c:\users\lenovo\documents\tubesstrukdat\rumahsakit.cpp
+	"rumahsakit.h"
+
