@@ -87,7 +87,7 @@ void showAllData(ListKlinik LK){
                 cout<<left<<setw(20)<<setfill(' ')<<info(k).ruangan<<endl;
                 adrP p = child(k);
                 if (p != NULL){
-                    cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~Pasien~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+                    cout<<"-----------------------------Daftar Pasien-----------------------------"<<endl;
                     cout<<left<<setw(20)<<setfill(' ')<<"No.";
                     cout<<left<<setw(30)<<setfill(' ')<<"Nama";
                     cout<<left<<setw(20)<<setfill(' ')<<"NIK";
@@ -149,6 +149,8 @@ void searchPasien(ListKlinik LK, string nik){
         p = child(k);
         while (p != NULL){
             if (info(p).nik == nik){
+                cout<<"==================Poliklinik "<<info(k).poliklinik<<"=================="<<endl;
+                cout<<"---------------------------Daftar Pasien---------------------------"<<endl;
                 cout<<left<<setw(20)<<setfill(' ')<<"No.";
                 cout<<left<<setw(20)<<setfill(' ')<<"Nama";
                 cout<<left<<setw(20)<<setfill(' ')<<"NIK";
@@ -230,7 +232,7 @@ void showDataKlinik(ListKlinik LK, string poliklinik){
         cout<<left<<setw(20)<<setfill(' ')<<info(k).ruangan<<endl;
         adrP p = child(k);
             if (p != NULL){
-                cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~Pasien~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+                cout<<"---------------------------Daftar Pasien---------------------------"<<endl;
                 cout<<left<<setw(20)<<setfill(' ')<<"No.";
                 cout<<left<<setw(30)<<setfill(' ')<<"Nama";
                 cout<<left<<setw(20)<<setfill(' ')<<"NIK";
@@ -254,17 +256,17 @@ void showDataKlinik(ListKlinik LK, string poliklinik){
 
 int selectMenu(){
     cout<<"==================MENU=================="<<endl;
-    cout<<"1. Klinik baru"<<endl;
-    cout<<"2. Pasien baru"<<endl;
-    cout<<"3. Tampilkan data setiap klinik"<<endl;
-    cout<<"4. Tampilkan daftar klinik"<<endl;
-    cout<<"5. Hapus suatu klinik"<<endl;
-    cout<<"6. Tampilkan data suatu klinik"<<endl;
-    cout<<"7. Cari pasien suatu klinik"<<endl;
-    cout<<"8. Hapus satu antrian suatu klinik"<<endl;
-    cout<<"9. Cari pasien dari seluruh data"<<endl;
-    cout<<"10. Banyak antrian suatu klinik"<<endl;
-    cout<<"0. EXIT"<<endl;
+    cout<<"[1] Polilinik baru"<<endl;
+    cout<<"[2] Pasien baru"<<endl;
+    cout<<"[3] Tampilkan data semua klinik"<<endl;
+    cout<<"[4] Tampilkan semua klinik"<<endl;
+    cout<<"[5] Tampilkan data suatu klinik"<<endl;
+    cout<<"[6] Hapus suatu klinik"<<endl;
+    cout<<"[7] Hapus antrian terdepan suatu klinik"<<endl;
+    cout<<"[8] Cari pasien suatu klinik"<<endl;
+    cout<<"[9] Cari pasien dari seluruh data"<<endl;
+    cout<<"[10] Banyak antrian suatu klinik"<<endl;
+    cout<<"[0] EXIT"<<endl;
     cout<<"Masukkan Menu : ";
 
     string input;
