@@ -14,6 +14,7 @@ int main()
     while (pilihan != 0){
         switch(pilihan){
         case 1:
+            cout<<endl<<"==========Poliklinik Baru=========="<<endl;
             cout<<"Poliklinik: ";
             getline(cin, kk.poliklinik);
             cout<<"Dokter: ";
@@ -23,6 +24,7 @@ int main()
             insertKlinik(LK, newKlinik(kk));
             break;
         case 2:
+            cout<<endl<<"=============Pasien Baru============="<<endl;
             cout<<"Nama: ";
             getline(cin, pp.nama);
             cout<<"NIK: ";
@@ -43,18 +45,20 @@ int main()
         case 4:
             showKlinik(LK);
             break;
-        case 5:
+        case 6:
             showKlinik(LK);
-            cout<<"Poliklinik yang dihapus: ";
+            cout<<endl<<"Poliklinik yang dihapus: ";
             getline(cin, poli);
             deleteKlinik(LK, poli);
             break;
-        case 6:
+        case 5:
+            cout<<endl<<"========Data Sebuah Klinik========"<<endl;
             cout<<"Poliklinik: ";
             getline(cin, poli);
             showDataKlinik(LK, poli);
             break;
-        case 7:
+        case 8:
+            cout<<endl<<"=============Cari Pasien Klinik============="<<endl;
             cout<<"Poliklinik: ";
             getline(cin, poli);
             cout<<"NIK pasien: ";
@@ -77,18 +81,21 @@ int main()
                 cout<<"Tidak ditemukan"<<endl;
             }
             break;
-        case 8:
-            cout<<"Poliklinik yang antriannya dihapus: ";
+        case 7:
+            cout<<endl<<"========Pasien Terdepan Selesai========"<<endl;
+            cout<<"Poliklinik pasien yang sudah selesai: ";
             getline(cin, poli);
             deletePasienKlinik(LK, poli);
             showDataKlinik(LK, poli);
             break;
         case 9:
+            cout<<endl<<"=============Cari Pasien============="<<endl;
             cout<<"NIK: ";
             getline(cin, nik);
             searchPasien(LK, nik);
             break;
         case 10:
+            cout<<endl<<"========Banyak Antrian Klinik========"<<endl;
             cout<<"Poliklinik: ";
             getline(cin, poli);
             cout<<countPasienKlinik(LK, poli)<<" antrian"<<endl;
