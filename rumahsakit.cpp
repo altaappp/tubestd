@@ -56,14 +56,14 @@ void showKlinik(ListKlinik LK){
     int i = 1;
     if (k != NULL){
         cout<<"==================Poliklinik=================="<<endl;
-        cout<<left<<setw(20)<<setfill(' ')<<"No.";
+        cout<<left<<setw(10)<<setfill(' ')<<"No.";
         cout<<left<<setw(20)<<setfill(' ')<<"Klinik";
-        cout<<left<<setw(20)<<setfill(' ')<<"Dokter";
+        cout<<left<<setw(30)<<setfill(' ')<<"Dokter";
         cout<<left<<setw(20)<<setfill(' ')<<"Ruangan"<<endl;
         while (k != NULL){
-            cout<<left<<setw(20)<<setfill(' ')<<i;
+            cout<<left<<setw(10)<<setfill(' ')<<i;
             cout<<left<<setw(20)<<setfill(' ')<<info(k).poliklinik;
-            cout<<left<<setw(20)<<setfill(' ')<<info(k).dokter;
+            cout<<left<<setw(30)<<setfill(' ')<<info(k).dokter;
             cout<<left<<setw(20)<<setfill(' ')<<info(k).ruangan<<endl;
             i++;
             k = next(k);
@@ -78,24 +78,22 @@ void showAllData(ListKlinik LK){
         adrK k = LK.first;
         while (k != NULL){
             cout<<"==============================Polilinik "<<info(k).poliklinik<<"=============================="<<endl;
-            cout<<left<<setw(25)<<setfill(' ')<<"Klinik";
-            cout<<left<<setw(20)<<setfill(' ')<<"Dokter";
+            cout<<left<<setw(30)<<setfill(' ')<<"Dokter";
             cout<<left<<setw(20)<<setfill(' ')<<"Ruangan"<<endl;
             if (k != NULL){
-                cout<<left<<setw(25)<<setfill(' ')<<info(k).poliklinik;
-                cout<<left<<setw(20)<<setfill(' ')<<info(k).dokter;
+                cout<<left<<setw(30)<<setfill(' ')<<info(k).dokter;
                 cout<<left<<setw(20)<<setfill(' ')<<info(k).ruangan<<endl;
                 adrP p = child(k);
                 if (p != NULL){
                     cout<<"-----------------------------Daftar Pasien-----------------------------"<<endl;
-                    cout<<left<<setw(20)<<setfill(' ')<<"No.";
+                    cout<<left<<setw(10)<<setfill(' ')<<"No.";
                     cout<<left<<setw(30)<<setfill(' ')<<"Nama";
                     cout<<left<<setw(20)<<setfill(' ')<<"NIK";
                     cout<<left<<setw(20)<<setfill(' ')<<"Tgl. Lahir";
                     cout<<left<<setw(20)<<setfill(' ')<<"Jenis Kelamin";
                     cout<<left<<setw(30)<<setfill(' ')<<"Keluhan"<<endl;
                     while (p != NULL){
-                        cout<<left<<setw(20)<<setfill(' ')<<info(p).antrian;
+                        cout<<left<<setw(10)<<setfill(' ')<<info(p).antrian;
                         cout<<left<<setw(30)<<setfill(' ')<<info(p).nama;
                         cout<<left<<setw(20)<<setfill(' ')<<info(p).nik;
                         cout<<left<<setw(20)<<setfill(' ')<<info(p).lahir;
@@ -151,12 +149,12 @@ void searchPasien(ListKlinik LK, string nik){
             if (info(p).nik == nik){
                 cout<<"==================Poliklinik "<<info(k).poliklinik<<"=================="<<endl;
                 cout<<"---------------------------Daftar Pasien---------------------------"<<endl;
-                cout<<left<<setw(20)<<setfill(' ')<<"No.";
+                cout<<left<<setw(10)<<setfill(' ')<<"No.";
                 cout<<left<<setw(20)<<setfill(' ')<<"Nama";
                 cout<<left<<setw(20)<<setfill(' ')<<"NIK";
                 cout<<left<<setw(20)<<setfill(' ')<<"Tgl. Lahir";
                 cout<<left<<setw(20)<<setfill(' ')<<"Jenis Kelamin"<<endl;
-                cout<<left<<setw(20)<<setfill(' ')<<i;
+                cout<<left<<setw(10)<<setfill(' ')<<i;
                 cout<<left<<setw(20)<<setfill(' ')<<info(p).nama;
                 cout<<left<<setw(20)<<setfill(' ')<<info(p).nik;
                 cout<<left<<setw(20)<<setfill(' ')<<info(p).lahir;
@@ -226,21 +224,21 @@ void showDataKlinik(ListKlinik LK, string poliklinik){
     adrK k = searchKlinik(LK, poliklinik);
     if (k != NULL){
         cout<<"==============================Polilinik "<<info(k).poliklinik<<"=============================="<<endl;
-        cout<<left<<setw(20)<<setfill(' ')<<"Dokter";
+        cout<<left<<setw(30)<<setfill(' ')<<"Dokter";
         cout<<left<<setw(20)<<setfill(' ')<<"Ruangan"<<endl;
-        cout<<left<<setw(20)<<setfill(' ')<<info(k).dokter;
+        cout<<left<<setw(30)<<setfill(' ')<<info(k).dokter;
         cout<<left<<setw(20)<<setfill(' ')<<info(k).ruangan<<endl;
         adrP p = child(k);
             if (p != NULL){
                 cout<<"---------------------------Daftar Pasien---------------------------"<<endl;
-                cout<<left<<setw(20)<<setfill(' ')<<"No.";
+                cout<<left<<setw(10)<<setfill(' ')<<"No.";
                 cout<<left<<setw(30)<<setfill(' ')<<"Nama";
                 cout<<left<<setw(20)<<setfill(' ')<<"NIK";
                 cout<<left<<setw(20)<<setfill(' ')<<"Tgl. Lahir";
                 cout<<left<<setw(20)<<setfill(' ')<<"Jenis Kelamin";
                 cout<<left<<setw(30)<<setfill(' ')<<"Keluhan"<<endl;
                 while (p != NULL){
-                    cout<<left<<setw(20)<<setfill(' ')<<info(p).antrian;
+                    cout<<left<<setw(10)<<setfill(' ')<<info(p).antrian;
                     cout<<left<<setw(30)<<setfill(' ')<<info(p).nama;
                     cout<<left<<setw(20)<<setfill(' ')<<info(p).nik;
                     cout<<left<<setw(20)<<setfill(' ')<<info(p).lahir;
